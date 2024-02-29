@@ -15,7 +15,7 @@ html, body {
 }
 
 #main {
-    background-color: #222;
+    background-color: #C4BCB3;
     overflow-x: hidden;
 }
 
@@ -273,14 +273,26 @@ html, body {
     font-weight: 100;
     letter-spacing: -1px;
 }
+#fixed-image {
+    height: 29vw;
+    width: 23vw;
+    position: fixed;
+    z-index: 11;
+    left: 50%;
+    top: 25%;
+    border-radius: 10px;
+    background-color: #e5efe3;
+    display: none;
+    background-size: cover;
+}
 
-#page3 {
+/* #page3 {
     padding-bottom: 100px;
     position: relative;
     background-color: #C4BCB3;
-}
+} */
 
-#page3 h1 {
+/* #page3 h1 {
     font-size: 550px;
     font-weight: 100;
     letter-spacing: -10px;
@@ -291,15 +303,70 @@ html, body {
     padding: 0 20px;
     line-height: 500px;
     font-family: canopee;
+} */
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    
+}
+#page3 h3{
+    background: #C4BCB3;
+    font-size: 100px;
+    margin-left: 2vw;
+    margin: 3vw;
+}
+.elem{
+    height: 170px;
+    width: 100%;
+    border-bottom: 1px solid rgb(77, 77, 77);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+    background: #222;
 }
 
-#page3 img {
-    height: 450px;
+.elem h1 {
+    font-size: 3.2vw;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+    font-family: "neu-med";
+    color: #C4BCB3;
+}
+
+.elem .overlay {
+    height: 100%;
+    width: 100%;
+    background: #656565;
     position: absolute;
-    top: 0;
-    right: 3%;
-
+    left: 0;
+    top: -100%;
+    transition: all ease 0.1s;
 }
+
+.elem:hover .overlay {
+    top: 0;
+    cursor: pointer;
+}
+
+
+#fixed-image {
+    height: 29vw;
+    width: 23vw;
+    position: fixed;
+    z-index: 11;
+    left: 50%;
+    top: 25%;
+    border-radius: 10px;
+    background-color: #e5efe3;
+    display: none;
+    background-position: center;
+    background-size: cover;
+}
+
+
 
 #page4 {
     height: 100vh;
@@ -319,7 +386,7 @@ html, body {
 #page4-left img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 #page4-right {

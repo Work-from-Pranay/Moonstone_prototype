@@ -20,6 +20,27 @@ Shery.mouseFollower({
     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     duration: 1,
   });
+  function pagehero(){
+    var elemC = document.querySelector("#elem-container")
+    var fixed = document.querySelector("#fixed-image")
+    elemC.addEventListener("mouseenter", function () {
+        fixed.style.display = "block"
+    })
+    elemC.addEventListener("mouseleave", function () {
+        fixed.style.display = "none"
+    })
+
+
+
+    var elems = document.querySelectorAll(".elem")
+    elems.forEach(function (e) {
+        e.addEventListener("mouseenter", function () {
+            var image = e.getAttribute("data-image")
+            fixed.style.backgroundImage = `url(${image})`
+        })
+    })
+  }
+
 
 // var tl = gsap.timeline()
 
@@ -39,3 +60,4 @@ Shery.mouseFollower({
 //     scale:1,
 //     duration:0.7
 // })
+pagehero();
