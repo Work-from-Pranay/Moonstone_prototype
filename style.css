@@ -169,6 +169,7 @@ html, body {
 #elem2 span{
     font-family: canopee;
     font-style: italic;
+    cursor: pointer;
 }
 
 #elem2 h3 {
